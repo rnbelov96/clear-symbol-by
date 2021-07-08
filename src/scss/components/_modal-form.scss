@@ -1,0 +1,281 @@
+.modal-form {
+  position: relative;
+  top: 12px;
+  left: 12px;
+  @include max-width(452px);
+  background-color: white;
+  border-radius: 10px;
+  padding-top: 27px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 18px;
+
+  &_desc {
+    top: 0px;
+    &::after {
+      content: url('/src/img/gains-grass.png');
+      position: absolute;
+      right: -575px;
+      top: 250px;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+    @media (max-width: 991px) {
+      margin-left: auto;
+      margin-right: auto;
+      left: 0px;
+      top: 12px;
+    }
+
+    @media (max-width: 575px) {
+      display: none;
+    }
+  }
+
+  &_feedback {
+    &::before {
+      content: url('/src/img/laptop.png');
+      position: absolute;
+      left: -1074px;
+      top: -260px;
+      pointer-events: none;
+
+      @media (max-width: 767px) {
+        content: none;
+        left: 0px;
+      }
+    }
+
+    @media (max-width: 767px) {
+      left: 0px;
+    }
+  }
+
+  &_catalog {
+    top: 22px;
+    .modal-form__bg {
+      background-color: rgba(255, 255, 255, 0.42);
+    }
+
+    &::before {
+      content: url('/src/img/arrow.png');
+      position: absolute;
+      top: 120px;
+      left: -310px;
+
+      @media (max-width: 1200px) {
+        content: none;
+      }
+    }
+
+    &::after {
+      content: url('/src/img/magazine.png');
+      position: absolute;
+      top: 134px;
+      left: -734px;
+
+      @media (max-width: 1200px) {
+        top: 4px;
+        left: -694px;
+      }
+
+      @media (max-width: 767px) {
+        content: none;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      margin-left: auto;
+    }
+
+    @media (max-width: 767px) {
+      left: 0px;
+      margin-right: auto;
+    }
+  }
+
+  &_plan {
+    margin-left: auto;
+
+    @media (max-width: 991px) {
+      margin-right: auto;
+      left: 0px;
+    }
+
+    &::before {
+      position: absolute;
+      content: url('/src/img/plan-shop.png');
+      top: 80px;
+      left: -868px;
+      z-index: -1;
+
+      @media (max-width: 991px) {
+        content: none;
+      }
+    }
+  }
+
+  &_city {
+    top: 103px;
+    .modal-form__bg {
+      background-color: rgba(255, 255, 255, 0.42);
+    }
+
+    @media (max-width: 1200px) {
+      top: 12px;
+      left: 0px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &_modal {
+    width: 98%;
+    left: 0px;
+    .modal-form__input-box {
+      text-align: left;
+
+      &:nth-child(3) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/name.png');
+        left: 26px;
+        bottom: -73px;
+        z-index: 1;
+      }
+
+      &:nth-child(4) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/phone.png');
+        left: 26px;
+        bottom: -73px;
+        z-index: 1;
+      }
+
+      &:nth-child(5) .modal-form__label::before {
+        position: absolute;
+        content: url('/src/img/icons/form/envelope.png');
+        left: 22px;
+        bottom: -70px;
+        z-index: 1;
+      }
+    }
+
+    .modal-form__policy-text {
+      text-align: left;
+    }
+  }
+
+  @media (max-width: 575px) {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 20px;
+  }
+}
+
+.modal-form__title {
+  font-size: 22px;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.modal-form__bg {
+  position: absolute;
+  z-index: -1;
+  @include central-align;
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  background-color: rgba(81, 151, 58, 0.42);
+  border-radius: 10px;
+  box-shadow: -0.8px 6.9px 28.1px -7.1px rgba(0, 0, 1, 0.28);
+}
+
+.modal-form__input-box {
+  margin-bottom: 16px;
+
+  &:nth-child(2) .modal-form__label::before {
+    position: absolute;
+    content: url('/src/img/icons/form/name.png');
+    left: 26px;
+    bottom: -73px;
+    z-index: 1;
+  }
+
+  &:nth-child(3) .modal-form__label::before {
+    position: absolute;
+    content: url('/src/img/icons/form/phone.png');
+    left: 26px;
+    bottom: -73px;
+    z-index: 1;
+  }
+
+  &:nth-child(4) .modal-form__label::before {
+    position: absolute;
+    content: url('/src/img/icons/form/envelope.png');
+    left: 22px;
+    bottom: -70px;
+    z-index: 1;
+  }
+}
+
+.modal-form__label {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 2.22;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.modal-form__input {
+  background-color: #eaeaea;
+  width: 100%;
+  height: 73px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 67px;
+  padding-right: 18px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 2;
+  position: relative;
+  border-radius: 100px;
+  border: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border: 1px solid black;
+  }
+}
+
+.modal-form__policy-text {
+  width: 103%;
+  font-size: 16px;
+  font-weight: 100;
+  color: #010101;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: url('/src/img/icons/form/radio.png');
+    top: 0px;
+    left: -27px;
+
+    @media (max-width: 575px) {
+      content: none;
+    }
+  }
+
+  button {
+    @include reset-btn;
+    color: #010101;
+    font-weight: 100;
+
+    &:hover,
+    &:focus {
+      outline: none;
+    }
+  }
+}
