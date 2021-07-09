@@ -27,7 +27,7 @@ const validateForm = form => {
 
   if (
     phoneInputEl.value !== ''
-    && !validator.isMobilePhone(`${phoneInputEl.value.replace(/\(|\)|-|_|\s/g, '')}`, 'be-BY')
+    && `${phoneInputEl.value.replace(/\(|\)|-|_|\s/g, '')}`.length < 13
   ) {
     phoneInputEl.classList.add('input-error');
     isOk = false;
